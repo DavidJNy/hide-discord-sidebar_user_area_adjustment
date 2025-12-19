@@ -29,7 +29,7 @@ body.hide-dis-bar #hds-btn {
 
 body.hide-dis-bar.channel-hide div[class*="sidebarList"] {
   transition: all 0.1s ease 0.1s;
-  width: 0 !important;
+  width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 1px) !important;
   padding-left: 3.5vmin !important;
 }
 body.hide-dis-bar.channel-hide div[class*="sidebarList"]:hover {
@@ -49,6 +49,43 @@ body.hide-dis-bar.channel-hide div[class*="sidebarList"]:hover > * {
   opacity: 1;
   transition: opacity 0.2s linear;
   /* display: flex; */
+}
+
+body.hide-dis-bar.channel-hide [aria-label="User area"] {
+  width: 0 !important;
+  min-width: 0 !important;
+  padding-left: 7.5vmin !important;
+}
+
+body.hide-dis-bar.channel-hide [aria-label="User area"]:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.15s ease;
+  width: calc(100% - var(--custom-panels-spacing)*2) !important;
+  background: var(--background-gradient-highest,var(--background-base-low));
+  padding-left: 0 !important;
+}
+
+body.hide-dis-bar.channel-hide [aria-label="User area"] [class*="container"] {
+  margin-left: -8vmin;
+}
+
+body.hide-dis-bar.channel-hide [aria-label="User area"]:hover [class*="container"] {
+  margin-left: unset;
+}
+
+body.hide-dis-bar.channel-hide [aria-label="User area"] [class*="buttons"] {
+  visibility: hidden;;
+}
+
+body.hide-dis-bar.channel-hide [aria-label="User area"]:hover [class*="buttons"]{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.15s ease;
+  background: var(--background-gradient-highest,var(--background-base-low));
+  padding-left: 0 !important;
 }
 
 /* Fix layout issue in Firefox */
