@@ -29,7 +29,7 @@ body.hide-dis-bar #hds-btn {
 
 body.hide-dis-bar.channel-hide div[class*="sidebarList"] {
   transition: all 0.1s ease 0.1s;
-  width: 0 px;
+  width: 0 !important;
   padding-left: 3.5vmin !important;
 }
 body.hide-dis-bar.channel-hide div[class*="sidebarList"]:hover {
@@ -125,4 +125,5 @@ body.hide-dis-bar div[class^="sidebar_"] {
   height: 18px;
   margin-left: 5px;
 }
+
 
