@@ -62,7 +62,7 @@ body.hide-dis-bar.channel-hide [aria-label="User area"]:hover {
   visibility: visible;
   pointer-events: auto;
   transition: opacity 0.15s ease;
-  width: calc(100% - var(--custom-panels-spacing)*2) !important;
+  width: calc(100% - var(--custom-panels-spacing) * 2) !important;
   background: var(--background-gradient-highest,var(--background-base-low));
   padding-left: 0 !important;
 }
@@ -76,7 +76,7 @@ body.hide-dis-bar.channel-hide [aria-label="User area"]:hover [class*="container
 }
 
 body.hide-dis-bar.channel-hide [aria-label="User area"] [class*="buttons"] {
-  visibility: hidden;;
+  visibility: hidden;
 }
 
 body.hide-dis-bar.channel-hide [aria-label="User area"]:hover [class*="buttons"]{
@@ -125,5 +125,6 @@ body.hide-dis-bar div[class^="sidebar_"] {
   height: 18px;
   margin-left: 5px;
 }
+
 
 
